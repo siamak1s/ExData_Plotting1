@@ -6,7 +6,9 @@ data$Global_active_power <- as.numeric(data$Global_active_power)
 data$DateTime = as.POSIXct(paste(data$Date,data$Time))
 data <- subset(data,select = -c("Date","Time"))
 par(mfrow=c(2,2))
+#PLOT 1
 plot(data$DateTime,data$Global_active_power, type="l", xlab="", ylab="Global Active Power")
+#PLOT 2
 plot(data$DateTime,data$Voltage, type="l", xlab="datetime", ylab="Voltage")
 ##PLOT 3
 plot(data$DateTime,data$Sub_metering_1, type="l", xlab="", ylab="Energy sub metering")
